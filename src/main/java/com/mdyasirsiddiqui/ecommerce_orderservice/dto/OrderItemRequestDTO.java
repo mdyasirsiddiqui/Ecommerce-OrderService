@@ -1,0 +1,11 @@
+package com.mdyasirsiddiqui.ecommerce_orderservice.dto;
+
+import lombok.*;
+
+import java.util.List;
+
+@AllArgsConstructor@NoArgsConstructor@Getter@Setter@Builder
+public class OrderItemRequestDTO {
+    private Long userId;
+    private List<OrderItemsDTO> items;
+}
