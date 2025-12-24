@@ -5,7 +5,7 @@ import lombok.*;
 import java.util.List;
 
 @AllArgsConstructor@NoArgsConstructor@Getter@Setter@Builder
-public class OrderItemRequestDTO {
+public class OrderRequestDTO {
     private Long userId;
     private List<OrderItemsDTO> items;
 }
