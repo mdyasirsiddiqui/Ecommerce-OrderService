@@ -1,8 +1,11 @@
 package com.mdyasirsiddiqui.ecommerce_orderservice.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.mdyasirsiddiqui.ecommerce_orderservice.dto.OrderItemsDTO;
+import com.mdyasirsiddiqui.ecommerce_orderservice.enums.OrderStatus;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -11,5 +14,11 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name="orders")
-public class Order {
+public class Order extends BaseEntity {
+    private Long userId;
+
+    @Enumerated(EnumType.STRING)
+    private OrderStatus status;
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    private List<OrderItems> itemList;
 }
