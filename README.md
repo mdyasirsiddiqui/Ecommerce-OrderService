@@ -3,7 +3,7 @@
 The Ecommerce‑OrderService is part of the Ecommerce microservices architecture alongside the Product and Category services. It focuses on managing customer orders — creating, retrieving, and tracking them — while integrating with product data. Built with Spring Boot, Spring Data JPA, and Flyway, it ensures reliable persistence, versioned database migrations, and consistent error handling.
 
 🚀 Features
-REST API endpoint /orders
+REST API endpoint /orders -- create/ adding order api 
 
 REST API endpoint /orders/{id} 
 
@@ -37,3 +37,5 @@ Gradle
 Markdown
 
 📖 Version History
+# v1.0.0
+Initial version Implemented `/addOrder` endpoint.
