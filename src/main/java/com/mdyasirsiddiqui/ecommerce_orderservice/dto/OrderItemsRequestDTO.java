@@ -7,7 +7,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class OrderItemsDTO {
+public class OrderItemsRequestDTO {
     private Long productId;
-    private Long quantity;
+    private int quantity;
 }

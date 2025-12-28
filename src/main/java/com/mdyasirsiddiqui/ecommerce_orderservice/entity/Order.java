@@ -1,6 +1,5 @@
 package com.mdyasirsiddiqui.ecommerce_orderservice.entity;
 
-import com.mdyasirsiddiqui.ecommerce_orderservice.dto.OrderItemsDTO;
 import com.mdyasirsiddiqui.ecommerce_orderservice.enums.OrderStatus;
 import jakarta.persistence.*;
 import lombok.*;

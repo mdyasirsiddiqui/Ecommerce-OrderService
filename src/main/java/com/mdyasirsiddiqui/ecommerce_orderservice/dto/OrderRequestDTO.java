@@ -7,5 +7,5 @@ import java.util.List;
 @AllArgsConstructor@NoArgsConstructor@Getter@Setter@Builder
 public class OrderRequestDTO {
     private Long userId;
-    private List<OrderItemsDTO> items;
+    private List<OrderItemsRequestDTO> items;
 }
