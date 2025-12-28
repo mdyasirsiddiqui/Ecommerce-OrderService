@@ -10,19 +10,30 @@ import org.springframework.web.client.RestTemplate;
 @Slf4j
 @Component
 public class ProductServiceClient {
-    private  final RestTemplateBuilder restTemplateBuilder;
+        private final RestTemplate restTemplate;
 
-    public ProductServiceClient(RestTemplateBuilder restTemplateBuilder) {
-        this.restTemplateBuilder = restTemplateBuilder;
-    }
+        public ProductServiceClient(RestTemplate restTemplate) {
+            this.restTemplate = restTemplate;
+        }
 
-    public ProductDTO getProductById(Long productId)
-    {
-        RestTemplate restTemplate= restTemplateBuilder.build();
-        String url = "http://localhost:8080/products/" + productId;
-        //String url="http://localhost:8080/api/products/"+productId;
-        ResponseEntity<ProductDTO> response=restTemplate.getForEntity(url, ProductDTO.class);
-        return response.getBody();
-    }
+        public ProductDTO getProductById(Long productId) {
+            String url = "http://ECOMMERCE/api/products/" + productId;
+            ResponseEntity<ProductDTO> response = restTemplate.getForEntity(url, ProductDTO.class);
+            return response.getBody();
+        }
+//    private  final RestTemplateBuilder restTemplateBuilder;
+//
+//    public ProductServiceClient(RestTemplateBuilder restTemplateBuilder) {
+//        this.restTemplateBuilder = restTemplateBuilder;
+//    }
+//
+//    public ProductDTO getProductById(Long productId)
+//    {
+//        RestTemplate restTemplate= restTemplateBuilder.build();
+//        String url = "http://localhost:8080/products/" + productId;
+//        //String url="http://localhost:8080/api/products/"+productId;
+//        ResponseEntity<ProductDTO> response=restTemplate.getForEntity(url, ProductDTO.class);
+//        return response.getBody();
+//    }
 }
 
