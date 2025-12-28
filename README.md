@@ -37,5 +37,7 @@ Gradle
 Markdown
 
 📖 Version History
+# v1.0.1
+Defect fix
 # v1.0.0
 Initial version Implemented `/addOrder` endpoint.
