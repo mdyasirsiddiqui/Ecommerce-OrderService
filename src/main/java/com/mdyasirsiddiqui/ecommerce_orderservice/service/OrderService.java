@@ -28,6 +28,7 @@ public class OrderService implements IOrderService{
     }
     @Override
     public CreateOrderResponseDTO createOrder(OrderRequestDTO request) {
+        log.info("request is {}", request);
     Order order=OrderMapper.toEntity(request);
     log.info(" In order service - order is recived {}", order);
 //    Order saved=repo.save(order);

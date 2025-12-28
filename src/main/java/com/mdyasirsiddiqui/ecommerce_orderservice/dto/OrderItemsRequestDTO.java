@@ -7,6 +7,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
+@ToString
 public class OrderItemsRequestDTO {
     private Long productId;
     private int quantity;

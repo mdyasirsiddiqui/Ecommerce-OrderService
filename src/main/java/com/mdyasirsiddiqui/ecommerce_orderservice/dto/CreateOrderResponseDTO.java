@@ -8,6 +8,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
+@ToString
 public class CreateOrderResponseDTO {
     private Long orderId;
     private OrderStatus status;
